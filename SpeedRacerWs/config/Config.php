@@ -8,7 +8,7 @@ define('DB_HOST', 'localhost');
 define('DB_NAME', 'speedracer');*/
 
 define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'ora-6502@MRL_()');
+define('DB_PASSWORD', 'ora-6502@PSR_2014()');
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'speedracer');
  

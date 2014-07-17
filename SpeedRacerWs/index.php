@@ -83,11 +83,14 @@ if (is_array($resultado)){
 $resultado = existeUsuario('Argos');
 $salida=null;
 //echo gettype($resultado);
+echo 'PRUEBAAAAAAAAAAAAaa';
 if (is_array($resultado)){
 	for ($i=0;$i<count($resultado);$i++){
 		$salida=$salida.';'.$resultado[$i];
 	}
-	echo $salida;
+	if(is_null($salida)){
+		echo "Sin resultados";
+	}
 }
 
 
