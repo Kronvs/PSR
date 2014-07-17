@@ -18,7 +18,7 @@ class dbHandler {
 
 	/**
 	 * Establishing database connection
-	 * @return database connection handler
+	 * @return database connection handler asdfasdfasdfasd
 	 */
 	function connect() {
 		//include_once dirname(__FILE__) . './Config.php';
