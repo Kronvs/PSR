@@ -67,6 +67,21 @@ class dbHandler {
 		}
 	}
 	
+	function obtenerTipoAccion($accion){ //devuelve la accion a buscar
+		$cadena;
+		$foo = file(ltrim(rtrim(strval(FILE)))); //abrimos el fichero de acciones
+		foreach ($foo as $i => $line)
+		{
+			if (strstr($line, $accion))
+			{
+				strpos($line,":");
+				$cadena = substr($line,strpos($line,":")+1); //buscamos el tipo de acción
+			}
+		}
+		return $cadena;
+		
+	}
+	
 	/**
 	 * create a generic database statement
 	 * @return execution statement result
@@ -159,7 +174,10 @@ class dbHandler {
 		}
 		
 		if ($action == 'existe'){			
-			$resultado=$this->execute('query','eusuario',$tipoArgOper,$argOper); //return
+			$resultado=$this->execute(CONSULTA,$this->obtenerTipoAccion($action),$tipoArgOper,$argOper); //return
+		}
+		if ($action == 'alta'){
+			$resultado=$this->execute(CONSULTA,$this->obtenerTipoAccion($action),$tipoArgOper,$argOper); //return
 		}
 		return $resultado;
 	}
